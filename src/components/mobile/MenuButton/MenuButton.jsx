@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { MenuButton } from 'theme-ui';
 import './MenuButton.css';
+import theme from '../../../gatsby-plugin-theme-ui/index'
+import { ThemeUIProvider } from 'theme-ui'
 
 
 const MenuButtonMobile = () => {
@@ -17,7 +19,7 @@ const MenuButtonMobile = () => {
     }
 
     return (
-        <>
+        <ThemeUIProvider theme={theme}>
             <MenuButton
                 aria-label="Toggle Menu"
                 onClick={toggleMenu}
@@ -46,7 +48,7 @@ const MenuButtonMobile = () => {
                     </div>
                 </div>
             )}
-        </>
+        </ThemeUIProvider>
     );
 }
 
