@@ -12,14 +12,17 @@ const App = () => {
   });
 
   useEffect(() => {
+    var login = isLoggedIn()
     const handleResize = () => {
       setWindowDimensions({
         width: window.innerWidth,
         height: window.innerHeight,
       });
-      if (!isLoggedIn()) {
+
+      if (login === false) {
         navigate('/login')
       }
+
     };
 
     if (typeof window !== 'undefined') {
@@ -37,10 +40,10 @@ const App = () => {
         Tancar sessió
       </button>
       <head><meta name="description" content="Put your description here."></meta></head>
-      
-      {windowDimensions.width > windowDimensions.height && <Desktop />} 
-      {windowDimensions.width < windowDimensions.height && <Mobile />} 
-      
+
+      {windowDimensions.width > windowDimensions.height && <Desktop />}
+      {windowDimensions.width < windowDimensions.height && <Mobile />}
+
     </div>
   );
 };
