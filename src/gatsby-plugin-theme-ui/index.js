@@ -5,16 +5,16 @@ const theme = {
     colors: {
         modes: {
             dark: {
-                text: '#ffff00',
-                background: '#01c5f7',
-                primary: '#00ff00',
-                secondary: '#00c0f1'
+                text: '#000000',
+                background: '#fff5e1',
+                primary: '#CCA37F',
+                secondary: '#ffffff'
             },
             light: {
-                text: '#ffff00',
-                background: '#ff0000',
-                primary: '#00ffff',
-                secondary: '#044cf1'
+                text: '#ffffff',
+                background: '#5b5b5b',
+                primary: '#000000',
+                secondary: '#bcbcbc'
             }
         }
     }

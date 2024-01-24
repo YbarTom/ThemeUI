@@ -15,7 +15,7 @@ const Desktop = () => {
   return (
     <ThemeUIProvider theme={theme}>
 
-      <Flex as="nav" backgroundColor="secondary">
+      <Flex as="nav" backgroundColor="primary">
         <NavLink href="#!" p={2}>
           Home
         </NavLink>
@@ -25,6 +25,7 @@ const Desktop = () => {
         <NavLink href="#!" p={2}>
           About
         </NavLink>
+        ------
         <button onClick={() => logout()}>{t('logout')}</button>
         <LanguageSwitcher></LanguageSwitcher>
         <ColorModeToggle></ColorModeToggle>
