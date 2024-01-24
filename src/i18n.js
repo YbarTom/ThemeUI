@@ -1,8 +1,8 @@
 // i18n.js
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import esTranslations from '../translations/es.json';
-import enTranslations from '../translations/en.json';
+import esTranslations from './translations/es.json';
+import enTranslations from './translations/en.json';
 
 const translations = {
   es: esTranslations,

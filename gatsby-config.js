@@ -12,7 +12,7 @@ module.exports = {
       options: {
         name: "Nombre del Sitio",
         short_name: "Nombre Corto",
-        start_url: "/",
+        start_url: "/login",
         background_color: "#ffffff",
         theme_color: "#663399",
         display: "standalone",

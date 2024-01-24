@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Mobile from "../components/mobile/mobile.component";
 import Desktop from "../components/desktop/desktop.component";
+import { isLoggedIn, logout } from "../services/auth";
+import { navigate } from "gatsby"
 
 
 const App = () => {
@@ -15,6 +17,9 @@ const App = () => {
         width: window.innerWidth,
         height: window.innerHeight,
       });
+      if (!isLoggedIn()) {
+        navigate('/login')
+      }
     };
 
     if (typeof window !== 'undefined') {
@@ -29,7 +34,9 @@ const App = () => {
   return (
     <div>
       <title>Prototip</title>
+      <button onClick={() => navigate('/profile')}>perfil</button>
       <head><meta name="description" content="Put your description here."></meta></head>
+      
       {windowDimensions.width > windowDimensions.height && <Desktop />} 
       {windowDimensions.width < windowDimensions.height && <Mobile />} 
       
