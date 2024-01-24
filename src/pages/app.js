@@ -5,6 +5,7 @@ import { isLoggedIn, logout } from "../services/auth";
 import { navigate } from "gatsby"
 
 
+
 const App = () => {
   const [windowDimensions, setWindowDimensions] = useState({
     width: typeof window !== 'undefined' ? window.innerWidth : 0,

@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
-import './mobile.styles.css';
+import styles from './mobile.styles.js';
 import MenuButtonMobile from './MenuButton/MenuButton';
+
 
 
 
 const Mobile = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [darkMode, setDarkMode] = useState(false);
-    
+
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
@@ -26,11 +27,13 @@ const Mobile = () => {
     };
 
     return (
-        
-        <main>
-            <MenuButtonMobile/>
-            <h1>Mobile</h1>
-        </main>
+
+        <div>
+            <header sx={styles.navbar}>
+                <MenuButtonMobile onClick={toggleMenu} />
+                
+            </header>
+        </div>
     );
 };
 
