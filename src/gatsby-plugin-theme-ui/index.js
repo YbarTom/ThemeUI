@@ -1,6 +1,6 @@
 const theme = {
     config: {
-    initialColorModeName: 'dark',
+    initialColorModeName: 'light',
   },
     colors: {
         modes: {

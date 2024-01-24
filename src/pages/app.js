@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Mobile from "../components/mobile/mobile.component";
 import Desktop from "../components/desktop/desktop.component";
-import { isLoggedIn, logout } from "../services/auth";
+import { isLoggedIn } from "../services/auth";
 import { navigate } from "gatsby"
 
 
@@ -32,10 +32,7 @@ const App = () => {
   }, []);
 
   return (
-    <div>
-      <button onClick={() => logout()}>
-        Tancar sessió
-      </button>
+    <div>      
       <head><meta name="description" content="Put your description here."></meta></head>
 
       {windowDimensions.width > windowDimensions.height && <Desktop />}

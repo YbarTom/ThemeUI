@@ -12,6 +12,8 @@
         "documents": "Documentos",
         "folder": "Carpeta",
         "password": "Contraseña",
-        "login": "Iniciar Sesión"
+        "login": "Iniciar Sesión",
+        "logout": "Cerrar Sesión",
+        "mode": "Cambiar modo"
     }
 }
