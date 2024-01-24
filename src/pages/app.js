@@ -12,17 +12,14 @@ const App = () => {
   });
 
   useEffect(() => {
-    var login = isLoggedIn()
+    if (!(isLoggedIn())) {
+      navigate(`/login`);
+    }
     const handleResize = () => {
       setWindowDimensions({
         width: window.innerWidth,
         height: window.innerHeight,
       });
-
-      if (login === false) {
-        navigate('/login')
-      }
-
     };
 
     if (typeof window !== 'undefined') {
