@@ -1,7 +1,9 @@
 import React from 'react';
 import { useColorMode } from 'theme-ui';
+import { useTranslation } from 'react-i18next'; 
 
 const ColorModeToggle = (props) => {
+  const { t } = useTranslation();
   const [colorMode, setColorMode] = useColorMode();
 
   const toggleColorMode = () => {
@@ -11,7 +13,7 @@ const ColorModeToggle = (props) => {
   return (
     <header>
       <button onClick={toggleColorMode}>
-        Toggle {colorMode === 'Light' ? 'Dark' : 'Light'}
+      {t('mode')}
       </button>
     </header>
   );

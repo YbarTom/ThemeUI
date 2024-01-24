@@ -1,24 +1,37 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { NavLink, Flex } from 'theme-ui'
 import './desktop.styles.css';
+import { logout } from "../../services/auth";
+import LanguageSwitcher from "../../components/generalComponents/LanguageSwitcher";
+import ColorModeToggle from "../../components/generalComponents/ColorModeToggle";
+import { useTranslation } from 'react-i18next';
+import theme from '../../gatsby-plugin-theme-ui/index'
+import { ThemeUIProvider } from 'theme-ui'
 
 
 
 const Desktop = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
-
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-    document.body.classList.toggle('light');
-    // Alternar clase en el body para cambiar el fondo
-  };
-
+  const { t } = useTranslation();
   return (
-    <main>
-      <h1>Desktop</h1>
-      
-    </main>
+    <ThemeUIProvider theme={theme}>
+
+      <Flex as="nav" backgroundColor="secondary">
+        <NavLink href="#!" p={2}>
+          Home
+        </NavLink>
+        <NavLink href="#!" p={2}>
+          Blog
+        </NavLink>
+        <NavLink href="#!" p={2}>
+          About
+        </NavLink>
+        <button onClick={() => logout()}>{t('logout')}</button>
+        <LanguageSwitcher></LanguageSwitcher>
+        <ColorModeToggle></ColorModeToggle>
+      </Flex>
+
+    </ThemeUIProvider>
+
 
   );
 };
