@@ -1,9 +1,9 @@
 {
-  "name": "theme-ui-test",
+  "name": "prototip-theme",
   "version": "1.0.0",
   "private": true,
-  "description": "theme-ui-test",
-  "author": "YbarTom",
+  "description": "prototip-theme",
+  "author": "MikiDix",
   "keywords": [
     "gatsby"
   ],
@@ -16,12 +16,14 @@
   },
   "dependencies": {
     "@emotion/react": "^11.11.3",
-    "@mdx-js/react": "^3.0.0",
+    "@mdx-js/react": "^2.3.0",
     "@theme-ui/mdx": "^0.16.1",
     "gatsby": "^5.13.1",
     "gatsby-plugin-theme-ui": "^0.16.1",
+    "i18next": "^23.7.18",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-i18next": "^14.0.1",
     "theme-ui": "^0.16.1"
   }
 }
