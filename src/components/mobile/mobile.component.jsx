@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
-import styles from './mobile.styles.js';
+
 import MenuButtonMobile from './MenuButton/MenuButton';
+import { ThemeUIProvider } from 'theme-ui'
+import theme from '../../gatsby-plugin-theme-ui/index'
+import {  Flex } from 'theme-ui'
+import ColorModeToggle from "../../components/generalComponents/ColorModeToggle";
+
+
 
 
 
@@ -27,13 +33,15 @@ const Mobile = () => {
     };
 
     return (
+        <ThemeUIProvider theme={theme}>
 
-        <div>
-            <header sx={styles.navbar}>
+            <Flex as="nav">
                 <MenuButtonMobile onClick={toggleMenu} />
-                
-            </header>
-        </div>
+                <ColorModeToggle></ColorModeToggle>
+            </Flex>
+
+
+        </ThemeUIProvider>
     );
 };
 
