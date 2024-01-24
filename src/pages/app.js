@@ -33,8 +33,9 @@ const App = () => {
 
   return (
     <div>
-      <title>Prototip</title>
-      <button onClick={() => navigate('/profile')}>perfil</button>
+      <button onClick={() => logout()}>
+        Tancar sessió
+      </button>
       <head><meta name="description" content="Put your description here."></meta></head>
       
       {windowDimensions.width > windowDimensions.height && <Desktop />} 
