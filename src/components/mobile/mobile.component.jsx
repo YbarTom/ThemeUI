@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import './mobile.styles.css';
-//import LanguageSwitcher from '../../LanguageSwitcher';
-//import { useTranslation } from 'react-i18next';
+import MenuButtonMobile from './MenuButton/MenuButton';
+
 
 
 const Mobile = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [darkMode, setDarkMode] = useState(false);
-    //const { t } = useTranslation();
+    
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
@@ -28,6 +28,7 @@ const Mobile = () => {
     return (
         
         <main>
+            <MenuButtonMobile/>
             <h1>Mobile</h1>
         </main>
     );
