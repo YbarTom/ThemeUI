@@ -1,7 +1,7 @@
 // LanguageSwitcher.js
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import i18n from './i18n.js'; // adjust the path accordingly
+import i18n from '../../i18n.js'; // adjust the path accordingly
 
 function LanguageSwitcher() {
   const { i18n } = useTranslation();
