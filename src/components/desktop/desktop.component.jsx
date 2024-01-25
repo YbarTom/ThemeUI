@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, Flex } from 'theme-ui'
+import { NavLink, Flex, Button } from 'theme-ui'
 import './desktop.styles.css';
 import { logout } from "../../services/auth";
 import LanguageSwitcher from "../../components/generalComponents/LanguageSwitcher";
@@ -27,10 +27,13 @@ const Desktop = () => {
           About
         </NavLink>
         ------
-        <button onClick={() => logout()}>{t('logout')}</button>
+        <Button sx={{ variant: 'buttons.primary'}} onClick={() => logout()}>{t('logout')}</Button>
         <LanguageSwitcher></LanguageSwitcher>
         <ColorModeToggle></ColorModeToggle>
       </Flex>
+
+      <Button sx={{ variant: 'buttons.primary'}}>primary</Button>
+      <Button sx={{ variant: 'buttons.custom'}}>custom</Button>
 
     </ThemeUIProvider>
 
