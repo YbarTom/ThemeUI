@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import MenuButtonMobile from './MenuButton/MenuButton';
 import { ThemeUIProvider, Grid, Box } from 'theme-ui';
 import theme from '../../gatsby-plugin-theme-ui/index';
-import ColorModeToggle from "../../components/generalComponents/ColorModeToggle";
+
 
 const Mobile = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -18,10 +18,6 @@ const Mobile = () => {
         }
     };
 
-    const toggleDarkMode = () => {
-        setDarkMode(!darkMode);
-        document.body.classList.toggle('light');
-    };
 
     return (
         <ThemeUIProvider theme={theme}>
@@ -32,10 +28,11 @@ const Mobile = () => {
             >
                 <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
                     <MenuButtonMobile onClick={toggleMenu} sx={{ zIndex: 1 }} />
-                    <ColorModeToggle onClick={toggleDarkMode} sx={{ zIndex: 2 }} />
+                    
                     
                 </Box>
             </Grid>
+            
         </ThemeUIProvider>
     );
 };

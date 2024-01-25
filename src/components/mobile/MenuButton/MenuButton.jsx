@@ -3,15 +3,22 @@ import { MenuButton } from 'theme-ui';
 import './MenuButton.css';
 import theme from '../../../gatsby-plugin-theme-ui/index'
 import { ThemeUIProvider } from 'theme-ui'
+import ColorModeToggle from "../../../components/generalComponents/ColorModeToggle";
 
 
 const MenuButtonMobile = () => {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [darkMode, setDarkMode] = useState(false);
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     }
 
+    const toggleDarkMode = () => {
+      setDarkMode(!darkMode);
+      document.body.classList.toggle('light');
+    };
+    
     const handleKeyPress = (event) => {
         if (event.key === 'Enter') {
             toggleMenu();
@@ -46,6 +53,7 @@ const MenuButtonMobile = () => {
                   </div>
                 </MenuButton>
                 <p>Menu Content Here</p>
+                <ColorModeToggle onClick={toggleDarkMode} sx={{ zIndex: 2 }} />
               </div>
             </div>
           )}
