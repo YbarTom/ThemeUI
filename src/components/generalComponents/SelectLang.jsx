@@ -12,7 +12,10 @@ const SelectLang = () => {
   };
 
   return (
-    <Select value={language} onChange={(e) => changeLanguage(e.target.value)}>
+    <Select
+      variant="select" // This is the key to apply the custom styles defined in the theme
+      value={language}
+    >
       <option value="es">Es</option>
       <option value="en">En</option>
       <option value="ca">Ca</option>
