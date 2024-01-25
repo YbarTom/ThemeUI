@@ -7,7 +7,7 @@ import ColorModeToggle from "../../components/generalComponents/ColorModeToggle"
 import { useTranslation } from 'react-i18next';
 import theme from '../../gatsby-plugin-theme-ui/index'
 import { ThemeUIProvider } from 'theme-ui'
-
+import SelectLang from '../generalComponents/SelectLang';
 
 
 
@@ -28,7 +28,7 @@ const Desktop = () => {
         </NavLink>
         ------
         <button onClick={() => logout()}>{t('logout')}</button>
-        <LanguageSwitcher></LanguageSwitcher>
+        <SelectLang/>
         <ColorModeToggle></ColorModeToggle>
       </Flex>
 
