@@ -1,7 +1,7 @@
 const theme = {
     config: {
-    initialColorModeName: 'light',
-  },
+        initialColorModeName: 'light',
+    },
     colors: {
         modes: {
             dark: {
@@ -17,6 +17,16 @@ const theme = {
                 secondary: '#bcbcbc'
             }
         }
+    },
+    forms: {
+        select: {
+            backgroundColor: 'background',
+            color: 'text',
+            padding: 2,
+            borderRadius: 4,
+            border: '1px solid',
+            borderColor: 'primary',
+        },
     }
 }
 
