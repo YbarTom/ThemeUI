@@ -3,8 +3,10 @@ import { MenuButton } from 'theme-ui';
 import './MenuButton.css';
 import theme from '../../../gatsby-plugin-theme-ui/index'
 import { ThemeUIProvider } from 'theme-ui'
+import { logout } from "../../../services/auth";
+import { useTranslation } from 'react-i18next';
 import ColorModeToggle from "../../../components/generalComponents/ColorModeToggle";
-
+import SelectLang from "../../generalComponents/SelectLang";
 
 const MenuButtonMobile = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -18,14 +20,15 @@ const MenuButtonMobile = () => {
       setDarkMode(!darkMode);
       document.body.classList.toggle('light');
     };
-    
+
     const handleKeyPress = (event) => {
         if (event.key === 'Enter') {
             toggleMenu();
         }
     }
-
+    const { t } = useTranslation();
     return (
+      
         <ThemeUIProvider theme={theme}>
           <MenuButton
             aria-label="Toggle Menu"
@@ -54,6 +57,8 @@ const MenuButtonMobile = () => {
                 </MenuButton>
                 <p>Menu Content Here</p>
                 <ColorModeToggle onClick={toggleDarkMode} sx={{ zIndex: 2 }} />
+                <button onClick={() => logout()}>{t('logout')}</button>
+                <SelectLang />
               </div>
             </div>
           )}

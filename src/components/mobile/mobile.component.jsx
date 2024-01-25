@@ -32,7 +32,7 @@ const Mobile = () => {
                     
                 </Box>
             </Grid>
-            
+           
         </ThemeUIProvider>
     );
 };
