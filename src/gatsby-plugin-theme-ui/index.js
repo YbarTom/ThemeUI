@@ -40,6 +40,7 @@ const theme = {
         myCustomStyle: {
             border: '2px solid',
             borderColor: 'buttonBackground',
+            text: 'text',
             borderRadius: 4,
             padding: 3,
         },
