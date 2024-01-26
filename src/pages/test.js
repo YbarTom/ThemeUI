@@ -1,7 +1,7 @@
 // src/pages/index.js
 
 import React from 'react';
-import { ThemeUIProvider, Button, Link, Text, Layout  } from 'theme-ui';
+import { ThemeUIProvider, Button, Link, Text  } from 'theme-ui';
 import theme from '../gatsby-plugin-theme-ui/index'; // Update the path
 
 const IndexPage = () => {
@@ -18,7 +18,7 @@ const IndexPage = () => {
           Custom Link
         </Link >
 
-        <Text  sx={{ variant: 'styles.myCustomStyle' }}>Custom Styled Paragraph</Text >
+        <Text  sx={{ variant: 'text.myCustomText' }}>Custom Styled Paragraph</Text >
 
       </div>
     </ThemeUIProvider>
