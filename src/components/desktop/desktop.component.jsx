@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink, Flex, Button } from 'theme-ui'
 import './desktop.styles.css';
-import { logout } from "../../services/auth";
+import LogOut from '../generalComponents/LogOut';
 import LanguageSwitcher from "../../components/generalComponents/LanguageSwitcher";
 import ColorModeToggle from "../../components/generalComponents/ColorModeToggle";
 import { useTranslation } from 'react-i18next';
@@ -27,7 +27,7 @@ const Desktop = () => {
           About
         </NavLink>
         ------
-        <button onClick={() => logout()}>{t('logout')}</button>
+        <LogOut/>
         <SelectLang/>
         <ColorModeToggle></ColorModeToggle>
       </Flex>

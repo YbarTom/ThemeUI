@@ -7,6 +7,7 @@ import { logout } from "../../../services/auth";
 import { useTranslation } from 'react-i18next';
 import ColorModeToggle from "../../../components/generalComponents/ColorModeToggle";
 import SelectLang from "../../generalComponents/SelectLang";
+import LogOut from "../../generalComponents/LogOut";
 
 const MenuButtonMobile = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -57,7 +58,7 @@ const MenuButtonMobile = () => {
                 </MenuButton>
                 <p>Menu Content Here</p>
                 <ColorModeToggle onClick={toggleDarkMode} sx={{ zIndex: 2 }} />
-                <button onClick={() => logout()}>{t('logout')}</button>
+                <LogOut/>
                 <SelectLang />
               </div>
             </div>
