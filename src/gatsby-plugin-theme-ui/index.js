@@ -51,6 +51,15 @@ const theme = {
             color: 'buttonBackground',
         },
     },
+    links: {
+        myCustomLink: {
+          color: 'primary',
+          textDecoration: 'none',
+          '&:hover': {
+            color: 'secondary',
+          },
+        },
+      },
 };
 
 export default theme;
