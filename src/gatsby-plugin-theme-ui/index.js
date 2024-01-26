@@ -2,8 +2,6 @@ const theme = {
     config: {
         initialColorModeName: 'light',
     },
-        initialColorModeName: 'light',
-    },
     colors: {
         modes: {
             dark: {
@@ -11,27 +9,48 @@ const theme = {
                 background: '#fff5e1',
                 primary: '#CCA37F',
                 secondary: '#ffffff',
-                buttonBackground: '#008080'
+                buttonBackground: '#008080',
             },
             light: {
                 text: '#ffffff',
                 background: '#5b5b5b',
                 primary: '#000000',
                 secondary: '#bcbcbc',
-                buttonBackground: '#008080'
-            }
-        }
+                buttonBackground: '#008080',
+            },
+        },
     },
-    forms: {
-        select: {
+    buttons: {
+        primary: {
+            backgroundColor: 'primary',
+            color: 'text',
+            '&:hover': {
+                backgroundColor: 'secondary',
+            },
+        },
+        custom: {
             backgroundColor: 'buttonBackground',
             color: 'text',
-            padding: 2,
+            '&:hover': {
+                backgroundColor: 'primary',
+            },
+        }
+    },
+    styles: {
+        myCustomStyle: {
+            border: '2px solid',
+            borderColor: 'buttonBackground',
             borderRadius: 4,
-            border: '1px solid',
-            borderColor: 'primary',
+            padding: 3,
         },
-    }
-}
+    },
+    text: {
+        myCustomText: {
+            fontSize: 18,
+            fontWeight: 'bold',
+            color: 'buttonBackground',
+        },
+    },
+};
 
-export default theme
+export default theme;
