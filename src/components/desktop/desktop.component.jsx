@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, Flex } from 'theme-ui'
+import { NavLink, Flex, Button } from 'theme-ui'
 import './desktop.styles.css';
 import { logout } from "../../services/auth";
 import LanguageSwitcher from "../../components/generalComponents/LanguageSwitcher";
@@ -31,6 +31,9 @@ const Desktop = () => {
         <SelectLang/>
         <ColorModeToggle></ColorModeToggle>
       </Flex>
+
+      <Button sx={{ variant: 'buttons.primary'}}>primary</Button>
+      <Button sx={{ variant: 'buttons.custom'}}>custom</Button>
 
     </ThemeUIProvider>
 

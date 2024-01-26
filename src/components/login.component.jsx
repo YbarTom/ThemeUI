@@ -1,9 +1,11 @@
 // src/pages/login.js
 import React, { useState, useEffect } from 'react';
 import { Container, Input, Button, Label, Flex } from 'theme-ui'
-import { useTranslation } from 'react-i18next'; 
+import { useTranslation } from 'react-i18next';
 import { handleLogin, isLoggedIn } from "../services/auth"
 import { navigate } from "gatsby"
+import theme from '../gatsby-plugin-theme-ui/index'
+import { ThemeUIProvider } from 'theme-ui'
 
 const LoginPage = () => {
   const [user, setUser] = useState('');
@@ -38,7 +40,8 @@ const LoginPage = () => {
   };
 
   return (
-    <Container p={4}>
+    <ThemeUIProvider theme={theme}>
+        <Container p={4}>
       <Flex
         as="form"  // Set the form element directly on Flex
         onSubmit={handleSubmit}  // Handle form submission
@@ -67,9 +70,16 @@ const LoginPage = () => {
           onChange={handleUpdate}
         />
 
-        <Button type="submit">{t('login')}</Button>
+        <Button
+          type="submit"
+          sx={{ variant: 'buttons.primary' }}
+        >
+          {t('login')}
+        </Button>
       </Flex>
     </Container>
+    </ThemeUIProvider>
+    
   )
 }
 
