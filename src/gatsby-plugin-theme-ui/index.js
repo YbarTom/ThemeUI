@@ -1,4 +1,3 @@
-// theme.js
 const theme = {
     config: {
         initialColorModeName: 'light',
@@ -10,14 +9,14 @@ const theme = {
                 background: '#fff5e1',
                 primary: '#CCA37F',
                 secondary: '#ffffff',
-                buttonBackground: '#008080', // Add a new property for button background color in dark mode
+                buttonBackground: '#008080',
             },
             light: {
                 text: '#ffffff',
                 background: '#5b5b5b',
                 primary: '#000000',
                 secondary: '#bcbcbc',
-                buttonBackground: '#4CAF50', // Add a new property for button background color in light mode
+                buttonBackground: '#008080',
             },
         },
     },
@@ -36,6 +35,30 @@ const theme = {
                 backgroundColor: 'primary',
             },
         }
+    },
+    links: {
+        myCustomLink: {
+            color: 'buttonBackground',
+            textDecoration: 'none',
+            '&:hover': {
+                color: 'secondary',
+            },
+        },
+    },
+    styles: {
+        myCustomStyle: {
+            border: '2px solid',
+            borderColor: 'buttonBackground',
+            borderRadius: 4,
+            padding: 3,
+        },
+    },
+    text: {
+        myCustomText: {
+            fontSize: 18,
+            fontWeight: 'bold',
+            color: 'buttonBackground',
+        },
     },
 };
 
